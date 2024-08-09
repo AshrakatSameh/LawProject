@@ -1,0 +1,20 @@
+{
+    "nav":{
+        "home":"HOME",
+        "about":"ABOUT",
+        "what":"WHAT WE DO",
+        "blog":"BLOG",
+        "contact":"CONTACT US"
+
+    },
+
+
+    "cover":{
+
+    },
+    
+
+    "about":{
+        "title":"About Us"
+    }
+}
