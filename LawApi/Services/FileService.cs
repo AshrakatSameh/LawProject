@@ -20,7 +20,7 @@
                 throw new ArgumentNullException(nameof(fileNameWithExtension));
             }
             var contentPath = _env.ContentRootPath;
-            var path = Path.Combine(contentPath, $"cvs", fileNameWithExtension);
+            var path = Path.Combine(contentPath, $"books", fileNameWithExtension);
 
             if (!File.Exists(path))
             {
