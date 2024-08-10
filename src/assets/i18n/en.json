@@ -1,20 +1,25 @@
 {
-    "nav":{
-        "home":"HOME",
-        "about":"ABOUT",
-        "what":"WHAT WE DO",
-        "blog":"BLOG",
-        "contact":"CONTACT US"
+  "nav":{
+      "home":"HOME",
+      "about":"ABOUT",
+      "what":"WHAT WE DO",
+      "blog":"BLOG",
+      "contact":"CONTACT US"
 
-    },
+  },
 
 
-    "cover":{
+  "cover":{
 
-    },
-    
+  },
+  
 
-    "about":{
-        "title":"About Us"
-    }
+  "about":{
+      "title":"About Us"
+  },
+
+  "persons":{
+    "ali":"Ali Amiri",
+    "ahmed":"Ahmed Amiri"
+  }
 }

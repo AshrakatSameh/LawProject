@@ -8,6 +8,15 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  changeLanguage(lang: string) {
+    const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    if (translateElement) {
+      translateElement.value = lang;
+      translateElement.dispatchEvent(new Event('change'));
+    }
+  }
+
   lang:any;
     constructor(private translate: TranslateService) {
       if("language" in localStorage){

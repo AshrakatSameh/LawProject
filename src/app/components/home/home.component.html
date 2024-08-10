@@ -13,8 +13,8 @@
                           <div class="banner_taital_main">
                              <h1 class="banner_taital">We Provide Law Practice</h1>
                              <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p>
-                             <div class="readmore_btn active"><a href="#">Read More</a></div>
-                             <div class="started_bt"><a routerLink="contact">Contact Us</a></div>
+                             <div class="readmore_btn active"><a href="#">{{'cover.read' | translate}}</a></div>
+                             <div class="started_bt"><a routerLink="contact">{{'nav.contact' | translate}}</a></div>
                           </div>
                        </div>
                        <div class="col-md-6">
@@ -24,14 +24,14 @@
                  </div>
                  <div class="carousel-item">
                     <div class="row">
-                       <div class="col-md-6">
-                          <div class="banner_taital_main">
-                             <h1 class="banner_taital">We Provide Law Practice</h1>
-                             <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p>
-                             <div class="readmore_btn active"><a href="#">Read More</a></div>
-                             <div class="started_bt"><a href="#">Contact Us</a></div>
-                          </div>
-                       </div>
+                     <div class="col-md-6">
+                        <div class="banner_taital_main">
+                           <h1 class="banner_taital">We Provide Law Practice</h1>
+                           <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p>
+                           <div class="readmore_btn active"><a href="#">{{'cover.read' | translate}}</a></div>
+                           <div class="started_bt"><a routerLink="contact">{{'nav.contact' | translate}}</a></div>
+                        </div>
+                     </div>
                        <div class="col-md-6">
                           <div class="banner_img"><img src="assets/images/banner-img.png"></div>
                        </div>
@@ -39,14 +39,14 @@
                  </div>
                  <div class="carousel-item">
                     <div class="row">
-                       <div class="col-md-6">
-                          <div class="banner_taital_main">
-                             <h1 class="banner_taital">We Provide Law Practice</h1>
-                             <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p>
-                             <div class="readmore_btn active"><a href="#">Read More</a></div>
-                             <div class="started_bt"><a href="#">Contact Us</a></div>
-                          </div>
-                       </div>
+                     <div class="col-md-6">
+                        <div class="banner_taital_main">
+                           <h1 class="banner_taital">We Provide Law Practice</h1>
+                           <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p>
+                           <div class="readmore_btn active"><a href="#">{{'cover.read' | translate}}</a></div>
+                           <div class="started_bt"><a routerLink="contact">{{'nav.contact' | translate}}</a></div>
+                        </div>
+                     </div>
                        <div class="col-md-6">
                           <div class="banner_img"><img src="assets/images/banner-img.png"></div>
                        </div>
@@ -252,37 +252,44 @@
         <div class="container">
            <div class="row">
               <div class="col-sm-12">
-                 <h1 class="studies_taital">Recent Case Studies</h1>
+                 <h1 class="studies_taital">Team Members</h1>
               </div>
            </div>
            <div class="studies_section_2">
               <div class="row">
                  <div class="col-md-4">
                     <div class="hover01 column">
-                       <figure><img src="assets/images/service-img1.png"></figure>
+                       <figure><img src="assets/images/ali.png"></figure>
                     </div>
                     <div class="studies_box">
-                       <h3 class="introduction_text">Master of Law, 2010</h3>
+                       <h3 class="introduction_text">
+                        {{'persons.ali' | translate}}
+
+                       </h3>
                     </div>
-                    <div class="read_bt"><a href="#">Read More</a></div>
+                    <div class="read_bt"><a routerLink="aliAmiri">Read More</a></div>
                  </div>
+
+                 <div class="col-md-4">
+                  <!-- <div class="hover01 column">
+                     <figure><img src="assets/images/service-img3.png"></figure>
+                  </div> -->
+                  <!-- <div class="studies_box">
+                     <h3 class="introduction_text">Ahmed Amiri</h3>
+                  </div> -->
+                  <!-- <div class="read_bt"><a href="#">Read More</a></div> -->
+               </div>
+           
                  <div class="col-md-4">
                     <div class="hover01 column">
-                       <figure><img src="assets/images/service-img2.png"></figure>
+                       <figure><img src="assets/images/ahmed.png"></figure>
                     </div>
                     <div class="studies_box">
-                       <h3 class="introduction_text">Master of Law, 2012</h3>
+                       <h3 class="introduction_text">        
+                     {{'persons.ahmed' | translate}}
+                     </h3>
                     </div>
-                    <div class="read_bt active"><a href="#">Read More</a></div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="hover01 column">
-                       <figure><img src="assets/images/service-img3.png"></figure>
-                    </div>
-                    <div class="studies_box">
-                       <h3 class="introduction_text">Master of Law, 2014</h3>
-                    </div>
-                    <div class="read_bt"><a href="#">Read More</a></div>
+                    <div class="read_bt"><a routerLink="ahmedAmiri">Read More</a></div>
                  </div>
               </div>
            </div>
@@ -300,9 +307,11 @@
               </div>
               <div class="col-md-6">
                  <div class="about_text_main">
-                    <h1 class="about_taital">About Us</h1>
-                    <p class="about_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
-                    <div class="readmore_bt"><a href="#">Read More</a></div>
+                    <h1 class="about_taital">{{'nav.about' | translate}}</h1>
+                    <p class="about_text">
+                     Amiri Lawyers & Legal Consultants was established in the United Arab Emirates in 2012, providing the best services on a wide range of different legal fields, including but not limited to arbitration, air navigation law, banking and finance law, Islamic banking laws, commercial law, civil law, company law, company incorporation and registration in the commercial register, consumer protection law, criminal law and penalties, seizure and detention procedures, debt collection and recovery, environmental law, inheritance and estate law, labor law, international trade law, intellectual property rights, enforcement of judicial rulings, immigration law, injuries and compensation, insurance law, family law, international law, professional ethics laws, investment law, laws related to hospitality and hotels, organizing entertainment and amusement, science and technology law, land, real estate and rental laws, property regulation laws, lawsuits, sports laws, tax law, transportation and communications law Commercial law...etc.
+                    </p>
+                    <div class="readmore_bt"><a routerLink="about">{{'cover.read' | translate}}</a></div>
                  </div>
               </div>
            </div>
@@ -333,7 +342,7 @@
                                       <div class="customer_img"><img src="assets/images/customer-img.png"></div>
                                    </div>
                                    <div class="customer_right">
-                                      <h3 class="customer_name">Giolio Mark <span class="quick_icon"><img src="images/quick-icon.png"></span></h3>
+                                      <h3 class="customer_name">Giolio Mark <span class="quick_icon"><img src="assets/images/quick-icon.png"></span></h3>
                                       <p class="enim_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internetanything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
                                    </div>
                                 </div>

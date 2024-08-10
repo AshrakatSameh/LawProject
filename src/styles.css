@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+  }
+  
+  body {
+    top: 0 !important;
+  }
+  
+  #google_translate_element {
+    display: none;
+  }
+  

@@ -14,6 +14,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { AliComponent } from './components/lawyers/ali/ali.component';
+import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     WhatDoComponent,
     BlogComponent,
     ContactComponent,
+    AliComponent,
+    AhmedComponent,
     
   ],
   imports: [
@@ -32,12 +36,12 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage:'en',
-        loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-        }
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      defaultLanguage: 'en'
     })
   ],
   providers: [],
