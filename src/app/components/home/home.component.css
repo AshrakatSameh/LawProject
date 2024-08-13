@@ -1,0 +1,12 @@
+.google_map_section {
+    margin-bottom: 20px; /* Space between the map and footer */
+    text-align: center; /* Center the content inside the section */
+}
+
+.google_map_section iframe {
+    max-width: 100%; /* Make sure it fits within the parent container */
+    height: 450px;
+    border: 0;
+    display: block;
+    margin: 0 auto; /* Center the iframe */
+}

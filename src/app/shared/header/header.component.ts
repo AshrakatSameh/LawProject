@@ -8,21 +8,48 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class HeaderComponent {
 
+  lang:string
 
   constructor(private translate: TranslateService) {
-    // Adding supported languages
-    translate.addLangs(['en', 'ar']);
-    // Setting the default language
-    translate.setDefaultLang('en');
+    console.log(this.translate.currentLang)
+    this.lang = this.translate.currentLang
+
+   
   }
 
-  changeLanguage(lang: string) {
-    const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-    if (translateElement) {
-      translateElement.value = lang;
-      translateElement.dispatchEvent(new Event('change'));
-    }
+  changeLanguage(selectedLang: string) {
+    localStorage.setItem('language', selectedLang);
+    this.lang = selectedLang;
+    this.translate.use(selectedLang);  // Update the language in the translate service if needed
+    window.location.reload(); // Reload the page to apply the language change
   }
+  
+  
+
+  // changeLanguage(language: string) {
+  //   this.translate.use(language);
+  //   localStorage.setItem('language', language);
+  // }
+  
+
+}
+
+
+  // constructor(private translate: TranslateService) {
+  //   // Adding supported languages
+  //   translate.addLangs(['en', 'ar']);
+  //   // Setting the default language
+  //   translate.setDefaultLang('en');
+  // }
+
+  // changeLanguage(lang: string) {
+  //   const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    
+  //   if (translateElement) {
+  //     translateElement.value = lang;
+  //     translateElement.dispatchEvent(new Event('change'));
+  //   }
+  // }
 
 //   lang:any = "en";
 // constructor(private translate:TranslateService){
@@ -37,7 +64,7 @@ export class HeaderComponent {
 //     translateElement.dispatchEvent(new Event('change'));
 //   }
 // }
-}
+// }
 
 //   changeLanguage(){
 //     if(this.lang == "en"){

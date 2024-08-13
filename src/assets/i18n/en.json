@@ -10,16 +10,38 @@
 
 
   "cover":{
+    "read": "ٌRead More"
+
 
   },
   
 
   "about":{
-      "title":"About Us"
+      "title":"About Us",
+      "description":"",
+      "body":""
   },
 
   "persons":{
     "ali":"Ali Amiri",
-    "ahmed":"Ahmed Amiri"
-  }
+    "ahmed":"Ahmed Amiri",
+    "team":"Team Members"
+  },
+
+  "services":{
+    "service":"Our Services",
+    "company":"Companies field",
+    "labor":"Labor Law",
+    "legal":"Legal Consultations"
+  },
+
+  "contact":{
+        "Name":"Name",
+        "phone":"Phone Number",
+        "email":"Your Email",
+        "message":"Message",
+        "send":"Send Now"
+
+      }
+
 }

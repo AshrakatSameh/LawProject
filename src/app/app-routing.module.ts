@@ -7,6 +7,9 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AliComponent } from './components/lawyers/ali/ali.component';
 import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
+import { CompaniesFieldComponent } from './components/companies-field/companies-field.component';
+import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.component';
+import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
 
 const routes: Routes = [
   {path:'what_we',component:WhatDoComponent},
@@ -14,6 +17,10 @@ const routes: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'aliAmiri',component:AliComponent},
   {path:'ahmedAmiri',component:AhmedComponent},
+  {path:'Companies',component:CompaniesFieldComponent},
+  {path:'Working',component:LaborLawsFiComponent},
+  {path:'legal',component:LegalConsultationsComponent},
+  {path:'about',component:AboutComponent},
   {path:'**',component:HomeComponent},
   {path:'',component:HomeComponent}
 

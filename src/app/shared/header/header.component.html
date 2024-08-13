@@ -2,26 +2,26 @@
 
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       <a class="navbar-brand" routerLink=""><img src="assets/images/logo.png"></a>
+       <a class="navbar-brand" routerLink=""><img src="assets/images/newLogo.png" width="90px" height="30px" style="margin-left: 60px;"></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
              <li class="nav-item ">
-                <a class="nav-link" routerLink="home">{{ 'nav.home' | translate }}</a>
+                <a class="nav-link notranslate" routerLink="home">{{ 'nav.home' | translate }}</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" routerLink="about">{{ 'nav.about' | translate }}</a>
+                <a class="nav-link notranslate" routerLink="about">{{ 'nav.about' | translate }}</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" routerLink="what_we">What we do</a>
+                <a class="nav-link" routerLink="what_we">{{ 'nav.what' | translate }}</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" routerLink="blog">Blog</a>
+                <a class="nav-link" routerLink="blog">{{ 'nav.blog' | translate }}</a>
              </li>
              <li class="nav-item">
-                <a class="nav-link" routerLink="contact">Contact Us</a>
+                <a class="nav-link" routerLink="contact">{{ 'nav.contact' | translate }}</a>
              </li>
           </ul>
           <!-- <form class="form-inline my-2 my-lg-0">
@@ -41,8 +41,8 @@
                 </button>
 
                 <div class="dropdown-content">
-                  <a href="#" (click)="changeLanguage('en')">English</a>
-                  <a href="#" (click)="changeLanguage('ar')">العربية</a>
+                  <a  (click)="changeLanguage('en')">English</a>
+                  <a  (click)="changeLanguage('ar')">العربية</a>
                 </div>
                 <!-- <div class="dropdown-content">
                   <a (click)="changeLanguage()">{{lang == 'en' ? 'عربي' :"English"}}</a>

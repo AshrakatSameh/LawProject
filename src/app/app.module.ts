@@ -16,6 +16,14 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AliComponent } from './components/lawyers/ali/ali.component';
 import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
+import { CompaniesFieldComponent } from './components/companies-field/companies-field.component';
+import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.component';
+import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -29,6 +37,9 @@ import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
     ContactComponent,
     AliComponent,
     AhmedComponent,
+    CompaniesFieldComponent,
+    LaborLawsFiComponent,
+    LegalConsultationsComponent,
     
   ],
   imports: [
@@ -36,12 +47,13 @@ import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'ar',
+
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       },
-      defaultLanguage: 'en'
     })
   ],
   providers: [],
@@ -49,6 +61,6 @@ import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
 })
 export class AppModule { }
 
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http);
-}
+// export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+//   return new TranslateHttpLoader(http);
+// }
