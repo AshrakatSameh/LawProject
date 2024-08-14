@@ -6,7 +6,6 @@
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
-@import url(css/font-awesome.min.css);
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
 @import url(swiper.min.css);
@@ -20,7 +19,16 @@
 * {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
+    font-family: 'AGA Mashq', sans-serif;
+
 }
+
+@font-face {
+    font-family: 'AGA Mashq';
+    src: url('assets/fonts/AGA Mashq Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
 
 html {
     scroll-behavior: smooth;
@@ -29,7 +37,7 @@ html {
 body {
     color: #666666;
     font-size: 14px;
-    font-family: 'Sen', sans-serif;
+    font-family: 'AGA Mashq Bold', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
@@ -52,6 +60,8 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: 'AGA Mashq', sans-serif;
+
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
