@@ -20,6 +20,7 @@ import { CompaniesFieldComponent } from './components/companies-field/companies-
 import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.component';
 import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
 import { ArticleComponent } from './components/article/article.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,6 +43,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     LaborLawsFiComponent,
     LegalConsultationsComponent,
     ArticleComponent,
+    DashboardComponent,
     
   ],
   imports: [

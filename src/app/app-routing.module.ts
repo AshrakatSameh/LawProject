@@ -11,6 +11,7 @@ import { CompaniesFieldComponent } from './components/companies-field/companies-
 import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.component';
 import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
 import { ArticleComponent } from './components/article/article.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'what_we',component:WhatDoComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'legal',component:LegalConsultationsComponent},
   {path:'about',component:AboutComponent},
   {path:'articles', component:ArticleComponent},
+  {path:'dashboard',component:DashboardComponent},
   {path:'**',component:HomeComponent},
   {path:'',component:HomeComponent}
 
