@@ -1,49 +1,33 @@
 import { Component } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-
+import { TranslateService } from '@ngx-translate/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-   lang:any;
+  lang: any;
+  showHeaderFooter = true;
+  title = 'lawyerFirm';
 
-
-  constructor(private translate: TranslateService) {
-    if("language" in localStorage){
+  constructor(private translate: TranslateService, private router: Router) {
+    if ('language' in localStorage) {
       this.lang = localStorage.getItem('language');
-translate.use(this.lang);
-
-    }else{
-      translate.use(this.lang)
+      translate.use(this.lang);
+    } else {
+      translate.use(this.lang);
     }
 
     translate.use('this.lang');
-    
-  // changeLanguage(lang: string) {
-  //   const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-  //   if (translateElement) {
-  //     translateElement.value = lang;
-  //     translateElement.dispatchEvent(new Event('change'));
-  //   }
-  // }
 
-  // lang:any;
-  //   constructor(private translate: TranslateService) {
-  //     if("language" in localStorage){
-  //       this.lang = localStorage.getItem('language')
-  //       translate.use(this.lang);
-  //     }else{
-  //       translate.use(this.translate.defaultLang)
-  //     }
-     
-  // }
-
-  
+     // Listen to routing events
+     this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Check if the current route is 'dashboard' and hide the header/footer if true
+        this.showHeaderFooter = this.router.url !== '/dashboard';
+      }
+    });
   }
-  title = 'lawyerFirm';
-
-
 }

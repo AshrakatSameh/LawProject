@@ -10,6 +10,7 @@ import { AhmedComponent } from './components/lawyers/ahmed/ahmed.component';
 import { CompaniesFieldComponent } from './components/companies-field/companies-field.component';
 import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.component';
 import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'what_we',component:WhatDoComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'Working',component:LaborLawsFiComponent},
   {path:'legal',component:LegalConsultationsComponent},
   {path:'about',component:AboutComponent},
+  {path:'dashboard',component:DashboardComponent},
   {path:'**',component:HomeComponent},
   {path:'',component:HomeComponent}
 

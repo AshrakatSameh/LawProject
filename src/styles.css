@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: AGA Mashq;
+  src: url('./assets/fonts/AGA-Mashq-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+
 .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
     display: none !important;
   }
