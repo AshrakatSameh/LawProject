@@ -1,0 +1,132 @@
+.participate-wrap figure{
+	overflow: hidden;
+	position: relative;
+}
+.participate-wrap figure::before{
+	background-color: #9398bb;
+	content: "";
+	position: absolute;
+	border-radius: 100%;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	margin: auto;
+	width: 0px;
+	height: 0px;
+	opacity: 0.7;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}
+
+.participate-wrap figure figcaption{
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	text-align: center;
+	margin-top: -20px;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}
+
+.participate-wrap figure figcaption .global-radius{
+	background: #ffffff;
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	text-align: center;
+	line-height: 38px;
+}
+
+.participate-wrap:hover figure::before{
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+}
+
+.participate-wrap:hover figure figcaption {
+	top: 50%;
+	opacity: 1;
+}
+
+
+.event_dit{
+	margin-top: 20px;
+}
+.event_dit ul {
+	float: left;
+	width: 100%;
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	position: relative;
+	line-height: 12px;
+}
+.event_dit ul li{
+	float: left;
+	position: relative;
+}
+
+.event_dit ul li a{
+	padding: 0px 5px;
+	font-size: 14px;
+	line-height: 25px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}
+
+.event_dit ul li a:hover{
+	color: #9398bb;
+}
+
+/* section */
+.service-widget h3 a,
+.section.wb .service-widget h3,
+.section.lb .service-widget h3 {
+    color: #1f1f1f;
+}
+.section.wb .hover-up h3{
+	font-size: 32px;
+	color: #ffffff;
+}
+.section.wb .hover-up p{
+	color: #cccccc;
+}
+.section-title {
+    display: block;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #999;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 33px;
+    margin: 0;
+}
+
+.section-title h3 {
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 62px;
+    margin: 0 0 25px;
+    padding: 0;
+    text-transform: none;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #100541;
+}
