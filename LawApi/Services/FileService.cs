@@ -29,9 +29,23 @@
             File.Delete(path);
         }
 
-        public Task<string> SaveFileAsync(IFormFile cvFile, string[] allowedFileExtensions)
+        public async Task<string> SaveFileAsync(IFormFile File, string[] allowedFileExtensions)
         {
-            throw new NotImplementedException();
+            if (File == null)
+            {
+                throw new ArgumentNullException(nameof(File));
+            }
+            var fileName = Path.GetFileName(File.FileName);
+            var img = Guid.NewGuid().ToString();
+            fileName = img + fileName;
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assetsData", fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await File.CopyToAsync(stream);
+            }
+
+            return fileName;
         }
     }
 }

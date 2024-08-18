@@ -35,7 +35,7 @@ namespace LawApi.Services
             var fileName = Path.GetFileName(imageFile.FileName);
             var img = Guid.NewGuid().ToString();
             fileName = img + fileName;
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", fileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "assetsData", fileName);
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
