@@ -12,6 +12,7 @@ import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.c
 import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
 import { ArticleComponent } from './components/article/article.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {path:'what_we',component:WhatDoComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'articles', component:ArticleComponent},
   {path:'dashboard',component:DashboardComponent},
+  {path:'login', component:LoginComponent},
   {path:'**',component:HomeComponent},
   {path:'',component:HomeComponent}
 

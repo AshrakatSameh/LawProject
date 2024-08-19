@@ -21,6 +21,9 @@ import { LaborLawsFiComponent } from './components/labor-laws-fi/labor-laws-fi.c
 import { LegalConsultationsComponent } from './components/legal-consultations/legal-consultations.component';
 import { ArticleComponent } from './components/article/article.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgToastModule } from 'ng-angular-popup';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,12 +47,16 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     LegalConsultationsComponent,
     ArticleComponent,
     DashboardComponent,
+    LoginComponent,
     
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgToastModule,
     TranslateModule.forRoot({
       defaultLanguage: 'ar',
 

@@ -5,7 +5,19 @@
   <!--logo start-->
   <a href="index.html" class="logo"><b>{{'global.dash' |translate}}</b></a>
   <!--logo end-->
- 
+  <div *ngIf="isLoggedIn(); then loggedInTemplate else loggedOutTemplate"></div>
+  <ng-template #loggedInTemplate >
+    <div class="" *ngIf="authService.getUserDetail() as userDetail">
+        <!-- <a class="" routerLink = "dash" style="color: #ff8a1d;">{{userDetail.fullName}} Dashboard</a> -->
+        <button class="btn btn-danger my-button" (click)="logout()" style="color: #fff;">
+            <i class="bi bi-box-arrow-right" style="color: #fff;"></i> Logout
+        </button>
+       
+    </div>
+</ng-template>
+<ng-template #loggedOutTemplate>
+                        
+</ng-template>
 
 </header>
 

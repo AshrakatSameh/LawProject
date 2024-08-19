@@ -2235,3 +2235,12 @@ label {
 }
 
 
+/* nav login and logout */
+.nav-right{
+    float:right;
+    display: inline;
+}
+.my-button{
+    float: right;
+    margin-top: 10px;
+}

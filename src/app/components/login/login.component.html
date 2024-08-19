@@ -1,0 +1,58 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+    <div class="title">Log In</div>
+    <div class="content">
+      <form action="#" [formGroup]="form" (ngSubmit)="login()" >
+        <div class="user-details">
+          <!-- <div class="input-box">
+            <span class="details">البريد الالكتروني</span>
+            <input type="text" placeholder="البريد الالكتروني" required>
+          </div>
+         
+          <div class="input-box">
+            <span class="details">كلمة المرور</span>
+           
+            <input type="text" placeholder="كلمة المرور" required>
+            <i  class="bi bi-eye-slash"></i>
+          </div> -->
+
+          <div class="input-box">
+            <label class="details">Email </label>
+            <input type="text" formControlName="email" placeholder="Email" required>
+          <small class="text-danger">*Email is required</small>
+          </div>
+         
+          <div class="input-box">
+            <label class="details">Password</label>
+            <!-- <input [type]="passtype" placeholder="كلمة المرور" required> -->
+            <input type="password" formControlName="password" placeholder="Password" required>
+            <small class="text-danger">*Password is required</small>
+            <!-- <i (click)="hideShowPass()" class="bi bi-eye-slash"></i> -->
+          </div>
+        
+        </div>
+
+        <div class="form-inlline fr mt-4">
+          <a id="forget" class="font-weight-bold">Forget Password</a>
+
+        </div>
+        
+        <!-- <div class="button"  >
+          <input [disabled]="loginForm.invalid"  type="submit" value="تسجيل">
+        </div> -->
+
+        <button type="submit" class="button">Log In</button>
+        <div class="my-5">
+            <span class="text-slate-600">
+              Don't have an account?
+            </span>
+            <a class="text-purple-700" [routerLink]="['/register']">Register</a>
+          </div>
+    </form>
+    </div>
+    <ng-toast></ng-toast>
+  </div>
+
+ 
