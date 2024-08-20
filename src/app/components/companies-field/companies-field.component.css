@@ -56,3 +56,13 @@
     padding-left: 10px;
   }
   
+
+  /* font */
+  .font{
+    top: 0 !important;
+  font-family: "Reem Kufi" !important;
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Khitan+Small+Script&family=Reem+Kufi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

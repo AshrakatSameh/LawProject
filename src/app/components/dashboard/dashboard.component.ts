@@ -30,18 +30,30 @@ export class DashboardComponent implements OnInit {
   isBookTableShow = false;
   isArticleTableShow = false;
   isArticleAddingFormShow=false;
+  isClientTableShow= false;
+
 
   books:any[] = [];
   articles:any[] =[];
+  clients:any[] =[];
 
   myArticleForm:FormGroup;
 
   
+
 toggleContactUsTable() :void{
   this.isContactTableShow = true;
   this.isBookTableShow = false;
   this.isArticleTableShow = false;
   this.isArticleAddingFormShow=false;
+
+}
+toggleClientTable() :void{
+  this.isContactTableShow = false;
+  this.isBookTableShow = false;
+  this.isArticleTableShow = false;
+  this.isArticleAddingFormShow=false;
+  this.isClientTableShow= true;
 
 }
 
