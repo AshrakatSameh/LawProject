@@ -10,14 +10,14 @@
                   <img src="assets/images/ali.png" />
                 </div>
               </div>
-              <div class="customer_right">
-                <h3 class="customer_name" style="padding-left: 30px">
+              <div class="customer_right" >
+                <h3 class="customer_name" style="padding-left: 30px" [ngClass]="directionService.getDirection()" >
                  {{'persons.ali' | translate}}
-                  <span class="quick_icon"
+                  <span class="quick_icon" [ngClass]="directionService.getIconeAlignment"
                     ><img src="assets/images/quick-icon.png"
                   /></span>
                 </h3>
-                <p class="enim_text" style="padding-left: 30px">
+                <p class="enim_text" style="padding-left: 30px" >
                   {{'persons.aliDefinition' | translate}}
                 </p>
               </div>

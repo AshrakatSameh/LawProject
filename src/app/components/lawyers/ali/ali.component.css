@@ -1,0 +1,18 @@
+.text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .icon-left {
+    float: left;
+    margin-left: 10px; /* Adjust as needed */
+  }
+  
+  .icon-right {
+    float: right;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  

@@ -40,8 +40,16 @@
         "phone":"Phone Number",
         "email":"Your Email",
         "message":"Message",
-        "send":"Send Now"
+        "send":"Send Now",
+        "askes":"Inquiries"
+      },
+      "dashboard":{
+        "askes":"Inquiries",
+        "books":"Books",
+        "article":"Articles",
+        "client":"Clients"
 
+    
       }
 
 }

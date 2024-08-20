@@ -336,14 +336,14 @@
               <div class="col-md-6">
                  <div class="about_img"><img src="assets/images/about-img.png"></div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6" [ngClass]="directionService.getDirection()">
                  <div class="about_text_main">
                     <h1 class="about_taital">{{'nav.about' | translate}}</h1>
-                    <p class="about_text">
+                    <p class="about_text" >
 
                      {{'about.description' | translate}}
                     </p>
-                    <div class="readmore_bt"><a routerLink="about">{{'cover.read' | translate}}</a></div>
+                    <div class="readmore_bt" [ngClass]="directionService.getButtonAlignment()"><a routerLink="about">{{'cover.read' | translate}}</a></div>
                  </div>
               </div>
            </div>
@@ -481,7 +481,7 @@
               <div class="row">
                  <div class="col-md-12">
                     <div class="mail_section map_form_container">
-                       <form action="">
+                       <form action="" [ngClass]="directionService.getDirection()">
                           <input type="text" class="mail_text" placeholder="{{'contact.Name' |translate}}" name="Name">
                           <input type="text" class="mail_text" placeholder="{{'contact.phone' |translate}}" name="Phone Number"> 
                           <input type="text" class="mail_text" placeholder="{{'contact.email' |translate}}" name="Your Email">

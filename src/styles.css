@@ -27,3 +27,23 @@ html, body  {
     display: none;
   }
   
+/* For left-to-right languages like English */
+.ltr-direction {
+  text-align: left;
+  direction: ltr;
+}
+
+/* For right-to-left languages like Arabic */
+.rtl-direction {
+  text-align: right;
+  direction: rtl;
+}
+
+.ltr-align-button {
+  float: left;
+}
+
+/* Align button to the right */
+.rtl-align-button {
+  float: right;
+}

@@ -1,81 +1,34 @@
 import { Component } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/language.service';
+import { DirectionService } from '../direction.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  lang: string;
 
-  lang:string
-
-  constructor(private translate: TranslateService) {
-    console.log(this.translate.currentLang)
-    this.lang = this.translate.currentLang
-
-   
+  constructor(
+    private translate: TranslateService,
+    private languageService: LanguageService,
+    public directionService: DirectionService
+  ) {
+    this.lang =
+      localStorage.getItem('language') || this.translate.getDefaultLang();
+    this.languageService.switchLanguage(this.lang); // Update the language
   }
 
   changeLanguage(selectedLang: string) {
-    localStorage.setItem('language', selectedLang);
+    localStorage.setItem('language', selectedLang); // Save the selected language to localStorage
     this.lang = selectedLang;
-    this.translate.use(selectedLang);  // Update the language in the translate service if needed
-    window.location.reload(); // Reload the page to apply the language change
+    this.languageService.switchLanguage(selectedLang);
+    window.location.reload();
   }
-  
-  
 
-  // changeLanguage(language: string) {
-  //   this.translate.use(language);
-  //   localStorage.setItem('language', language);
-  // }
-  
-
+  getDirectionClass() {
+    return this.lang === 'ar' ? 'rtl-direction' : 'ltr-direction';
+  }
 }
-
-
-  // constructor(private translate: TranslateService) {
-  //   // Adding supported languages
-  //   translate.addLangs(['en', 'ar']);
-  //   // Setting the default language
-  //   translate.setDefaultLang('en');
-  // }
-
-  // changeLanguage(lang: string) {
-  //   const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-    
-  //   if (translateElement) {
-  //     translateElement.value = lang;
-  //     translateElement.dispatchEvent(new Event('change'));
-  //   }
-  // }
-
-//   lang:any = "en";
-// constructor(private translate:TranslateService){
-//   console.log(this.translate.currentLang)
-//   this.lang = this.translate.currentLang;
-// }
-
-// changeLanguage(lang: string) {
-//   const translateElement = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-//   if (translateElement) {
-//     translateElement.value = lang;
-//     translateElement.dispatchEvent(new Event('change'));
-//   }
-// }
-// }
-
-//   changeLanguage(){
-//     if(this.lang == "en"){
-//       localStorage.setItem('language' , 'ar');
-//     }else{
-//       localStorage.setItem('language' , 'en');
-
-//     }
-
-//     window.location.reload();
-
-//   }
-
-// }

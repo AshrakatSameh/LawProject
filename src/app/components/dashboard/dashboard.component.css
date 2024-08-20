@@ -2244,3 +2244,188 @@ label {
     float: right;
     margin-top: 10px;
 }
+
+
+
+/* General Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 10px; /* Consistent padding */
+  }
+  
+  /* RTL Specific Styling */
+  .rtl .table {
+    direction: rtl;
+  }
+  
+  .rtl .table th, .rtl .table td {
+    text-align: right; /* Align text to the right for RTL */
+  }
+  
+  /* LTR Specific Styling */
+  .ltr .table {
+    direction: ltr;
+  }
+  
+  .ltr .table th, .ltr .table td {
+    text-align: left; /* Align text to the left for LTR */
+  }
+  
+  /* Optional: Adjust column spacing for RTL/LTR if needed */
+  .rtl .table th, .rtl .table td {
+    padding-right: 20px; /* Adjust as needed for RTL */
+  }
+  
+  .ltr .table th, .ltr .table td {
+    padding-left: 20px; /* Adjust as needed for LTR */
+  }
+  
+ /* Styles for sidebar and content */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px; /* Width of the sidebar */
+    /* background-color: #333; */
+    color: #fff;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+  
+  aside.open {
+    transform: translateX(0);
+  }
+  
+  #main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+  
+  #main-content.expanded {
+    margin-left: 250px; /* Width of the sidebar */
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Additional styles for table */
+  .table th, .table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+
+  #login-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../../assets/images/cover2.jpg') no-repeat center center/cover;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 70% opacity */
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-logo h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #e73232;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #c12d2d;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.social-login p {
+    margin: 20px 0 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.btn-facebook, .btn-google {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+}
+
+.btn-google {
+    background-color: #dd4b39;
+}
+
+.registration p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.registration a {
+    color: #e73232;
+}
+
+

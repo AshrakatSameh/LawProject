@@ -1,79 +1,78 @@
 <header class="header black-bg">
-    <div class="sidebar-toggle-box">
-        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation" (click)="toggleSidebar()"></div>
-    </div>
+  <div class="sidebar-toggle-box">
+    <div
+      class="fa fa-bars tooltips"
+      data-placement="right"
+      data-original-title="Toggle Navigation"
+      (click)="toggleSidebar()"
+    ></div>
+  </div>
   <!--logo start-->
-  <a href="index.html" class="logo"><b>{{'global.dash' |translate}}</b></a>
+  <a href="index.html" class="logo"
+    ><b>{{ "global.dash" | translate }}</b></a
+  >
   <!--logo end-->
-  <div *ngIf="isLoggedIn(); then loggedInTemplate else loggedOutTemplate"></div>
-  <ng-template #loggedInTemplate >
+  <div
+    *ngIf="isLoggedIn(); then loggedInTemplate; else loggedOutTemplate"
+  ></div>
+  <ng-template #loggedInTemplate>
     <div class="" *ngIf="authService.getUserDetail() as userDetail">
-        <!-- <a class="" routerLink = "dash" style="color: #ff8a1d;">{{userDetail.fullName}} Dashboard</a> -->
-        <button class="btn btn-danger my-button" (click)="logout()" style="color: #fff;">
-            <i class="bi bi-box-arrow-right" style="color: #fff;"></i> Logout
-        </button>
-       
+      <!-- <a class="" routerLink = "dash" style="color: #ff8a1d;">{{userDetail.fullName}} Dashboard</a> -->
+      <button
+        class="btn btn-danger my-button"
+        (click)="logout()"
+        style="color: #fff"
+      >
+        <i class="bi bi-box-arrow-right" style="color: #fff"></i> Logout
+      </button>
     </div>
-</ng-template>
-<ng-template #loggedOutTemplate>
-                        
-</ng-template>
-
+  </ng-template>
+  <ng-template #loggedOutTemplate> </ng-template>
 </header>
 
+<aside [class.open]="isSidebarVisible">
+  <div id="sidebar" class="nav-collapse" *ngIf="isSidebarVisible">
+    <!-- sidebar menu start-->
+    <ul class="sidebar-menu" id="nav-accordion">
+      <p class="centered pt-4">
+        <a routerLink="">
+          <img src="assets/images/newLogo.png" class="img-circle" width="60" />
+        </a>
+      </p>
+      <h5 class="centered">{{ "global.sideTitle" | translate }}</h5>
 
-<aside>
-    <div id="sidebar"  class="nav-collapse " *ngIf="isSidebarVisible">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu" id="nav-accordion">
-        
-              <p class="centered pt-4 "><a routerLink="">
-                <img src="assets/images/newLogo.png" class="img-circle" width="60">
-            </a></p>
-              <h5 class="centered">{{'global.sideTitle'|translate}}</h5>
-                  
-            <li class="mt">
-                <a class="" href="index.html">
-                    <i class="fa fa-dashboard"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
+      <li class="mt">
+        <a class="" (click)="toggleContactUsTable()">
+          <i class="fa fa-dashboard"></i>
+          <span>{{ "dashboard.askes" | translate }}</span>
+        </a>
+      </li>
 
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-desktop"></i>
-                    <span>UI Elements</span>
-                </a>
-                <ul class="sub">
-                    <li><a  href="general.html">General</a></li>
-                    <li><a  href="buttons.html">Buttons</a></li>
-                    <li><a  href="panels.html">Panels</a></li>
-                </ul>
-            </li>
+      <li class="sub-menu">
+        <a class="" (click)="toggleBookTable()">
+          <i class="fa fa-book"></i>
+          <span>{{ "dashboard.books" | translate }}</span>
+        </a>
+      </li>
 
-            <li class="sub-menu">
-                <a  (click)="toggleSubMenu()">
-                    <i class="fa fa-cogs"></i>
-                    <span>Components</span>
-                </a>
-                <ul  *ngIf="isSubMenuOpen">
-                    <li><a  >Calendar</a></li>
-                    <li><a  >Gallery</a></li>
-                    <li><a >Todo List</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
-                <a href="javascript:;" >
-                    <i class="fa fa-book"></i>
-                    <span>Extra Pages</span>
-                </a>
-                <ul class="sub">
+      <li class="sub-menu">
+        <a (click)="toggleArticleTable()">
+          <i class="fa fa-pencil-square-o"></i>
+          <span>{{ "dashboard.article" | translate }}</span>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a href="javascript:;">
+          <i class="fa fa-book"></i>
+          <span>{{ "dashboard.client" | translate }}</span>
+        </a>
+        <!-- <ul class="sub">
                     <li><a  href="blank.html">Blank Page</a></li>
                     <li><a  href="login.html">Login</a></li>
                     <li><a  href="lock_screen.html">Lock Screen</a></li>
-                </ul>
-            </li>
-            <li class="sub-menu">
+                </ul> -->
+      </li>
+      <!-- <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-tasks"></i>
                     <span>Forms</span>
@@ -81,8 +80,8 @@
                 <ul class="sub">
                     <li><a  href="form_component.html">Form Components</a></li>
                 </ul>
-            </li>
-            <li class="sub-menu">
+            </li> -->
+      <!-- <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class="fa fa-th"></i>
                     <span>Data Tables</span>
@@ -91,8 +90,8 @@
                     <li><a  href="basic_table.html">Basic Table</a></li>
                     <li><a  href="responsive_table.html">Responsive Table</a></li>
                 </ul>
-            </li>
-            <li class="sub-menu">
+            </li> -->
+      <!-- <li class="sub-menu">
                 <a href="javascript:;" >
                     <i class=" fa fa-bar-chart-o"></i>
                     <span>Charts</span>
@@ -101,16 +100,251 @@
                     <li><a  href="morris.html">Morris</a></li>
                     <li><a  href="chartjs.html">Chartjs</a></li>
                 </ul>
-            </li>
-
-        </ul>
-        <!-- sidebar menu end-->
-    </div>
+            </li> -->
+    </ul>
+    <!-- sidebar menu end-->
+  </div>
 </aside>
 
-
 <section id="main-content">
-    <section class="wrapper">
+  <section class="wrapper">
+    <!-- // Contact Us Table  -->
 
-    </section>
+    <div
+      class="row mt"
+      *ngIf="isContactTableShow"
+      [ngClass]="{
+        rtl: directionService.getDirection() === 'rtl',
+        ltr: directionService.getDirection() === 'ltr'
+      }"
+    >
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  {{ "contact.message" | translate }}
+                  <i class="fa fa-comment"></i>
+                </th>
+                <th>
+                  {{ "contact.email" | translate }}
+                  <i class="fa fa-envelope"></i>
+                </th>
+                <th class="hidden-phone">
+                  {{ "contact.phone" | translate }} <i class="fa fa-phone"></i>
+                </th>
+                <th>
+                  {{ "contact.Name" | translate }} <i class="fa fa-user"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <button class="btn btn-success btn-xs mr-1">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                  <button class="btn btn-danger btn-xs">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+                <td><a href="basic_table.html#">Total Ltd</a></td>
+                <td class="hidden-phone">Lorem Ipsum dolor</td>
+                <td>12120.00$</td>
+                <td><span class="label label-warning label-mini">Due</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /content-panel -->
+      </div>
+      <!-- /col-md-12 -->
+    </div>
+    <!-- /row -->
+
+    <!-- // Books Table -->
+
+    <div
+      class="row mt"
+      *ngIf="isBookTableShow"
+      [ngClass]="{
+        rtl: directionService.getDirection() === 'rtl',
+        ltr: directionService.getDirection() === 'ltr'
+      }"
+    >
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>
+                  {{ "dashboard.BookPdf" | translate }}
+                  <i class="fa fa-file"></i>
+                </th>
+
+                <!-- <th> {{'dashboard.ImageUrl' |translate}} <i class="fa fa-link"></i> </th> -->
+                <th>
+                  {{ "dashboard.author" | translate }}
+                  <i class="fa fa-user"></i>
+                </th>
+                <th class="hidden-phone">
+                  {{ "dashboard.des" | translate }} <i class="fa fa-pencil"></i>
+                </th>
+                <th>
+                  {{ "dashboard.title" | translate }}
+                  <i class="fa fa-address-book"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of books">
+                <td>
+                  <button class="btn btn-success btn-xs mr-1">
+                    <i class="fa fa-plus"></i>
+                  </button>
+
+                  <button class="btn btn-danger btn-xs">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+                <td>
+                  <a href="basic_table.html#">{{ item.bookPdf }}</a>
+                </td>
+                <!-- <td class="hidden-phone">{{item.imageUrl}}</td> -->
+                <td>{{ item.author }}</td>
+                <td>
+                  <span class="label label-warning label-mini">{{
+                    item.description
+                  }}</span>
+                </td>
+                <td>
+                  <span class="label label-warning label-mini">{{
+                    item.title
+                  }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /content-panel -->
+      </div>
+      <!-- /col-md-12 -->
+    </div>
+    <!-- /row -->
+
+    <!-- // Articles Table -->
+
+    <div
+      class="row mt"
+      *ngIf="isArticleTableShow"
+      [ngClass]="{
+        rtl: directionService.getDirection() === 'rtl',
+        ltr: directionService.getDirection() === 'ltr'
+      }"
+    >
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th></th>
+
+                <th>
+                  {{ "dashboard.PostDate" | translate }}
+                  <i class="fa fa-calendar"></i>
+                </th>
+                <th class="hidden-phone">
+                  {{ "dashboard.des" | translate }} <i class="fa fa-pencil"></i>
+                </th>
+                <th>
+                  {{ "dashboard.titleAr" | translate }}
+                  <i class="fa fa-address-book"></i>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of articles">
+                <td>
+                  <button class="btn btn-success btn-xs mr-1" (click)="toggleAtricleAddingForm()">
+                    <i class="fa fa-plus"></i>
+                  </button>
+
+                  <button class="btn btn-danger btn-xs" (click)="deleteArticleById(item.id)">
+                    <i class="fa fa-trash-o"></i>
+                  </button>
+                </td>
+                <td>
+                  <a href="basic_table.html#">{{ item.postDate }}</a>
+                </td>
+                <td class="hidden-phone">{{ item.description }}</td>
+                <td>{{ item.title }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /content-panel -->
+      </div>
+      <!-- /col-md-12 -->
+    </div>
+    <!-- /row -->
+
+    <!-- // Adding Articles -->
+
+    <div id="login-page" *ngIf="isArticleAddingFormShow">
+      <div class="background-overlay"></div>
+      <div class="login-container">
+        <div class="login-box">
+          <div class="login-logo">
+            <h1>Add Articles</h1>
+          </div>
+          <form
+            class="login-form"
+            action="#"
+            [formGroup]="myArticleForm"
+            (ngSubmit)="onSubmitArticle()"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="title"
+                formControlName="title"
+                placeholder="title"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="description"
+                formControlName="description"
+                placeholder="description"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="date"
+                class="form-control"
+                formControlName="postDate"
+                placeholder="Date of Birth"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
