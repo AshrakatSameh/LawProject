@@ -1,7 +1,7 @@
 
 
 <!-- Cover silder -->
-<div class="header_section">
+<div class="header_section" id="fontt">
 
     <div class="banner_section layout_padding">
         <div class="container-fluid">
@@ -13,8 +13,8 @@
                           <div class="banner_taital_main">
                              <h1 class="banner_taital font">نقدم لكم جميع الخدمات القانونية</h1>
                              <!-- <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p> -->
-                             <div class="readmore_btn active"><a href="#">{{'cover.read' | translate}}</a></div>
-                             <div class="started_bt"><a routerLink="contact">{{'nav.contact' | translate}}</a></div>
+                             <div class="readmore_btn active"><a routerLink="/about" class="font">{{'cover.read' | translate}}</a></div>
+                             <div class="started_bt"><a routerLink="/contact" class="font">{{'nav.contact' | translate}}</a></div>
                           </div>
                        </div>
                        <div class="col-md-6">
@@ -28,8 +28,8 @@
                         <div class="banner_taital_main">
                            <h1 class="banner_taital font">We Provide Law Practice</h1>
                            <!-- <p class="banner_text">Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem</p> -->
-                           <div class="readmore_btn active"><a href="#">{{'cover.read' | translate}}</a></div>
-                           <div class="started_bt"><a routerLink="contact">{{'nav.contact' | translate}}</a></div>
+                           <div class="readmore_btn active"><a href="#" class="font">{{'cover.read' | translate}}</a></div>
+                           <div class="started_bt"><a routerLink="contact" class="font">{{'nav.contact' | translate}}</a></div>
                         </div>
                      </div>
                        <div class="col-md-6">
@@ -61,8 +61,8 @@
                        <div class="right_arrow"><i class="fa fa-arrow-right"></i></div>
                     </div>
                     <div class="box_right">
-                       <p class="book_text">احجز</p>
-                       <h4 class="appoinment_text">موعد</h4>
+                       <p class="book_text font">احجز</p>
+                       <h4 class="appoinment_text font">موعد</h4>
                     </div>
                  </div>
               </div>
@@ -72,8 +72,8 @@
                        <div class="right_arrow"><i class="fa fa-arrow-right"></i></div>
                     </div>
                     <div class="box_right">
-                       <p class="book_text active">احصل على</p>
-                       <h4 class="appoinment_text active"> استشارة مجانية</h4>
+                       <p class="book_text active font">احصل على</p>
+                       <h4 class="appoinment_text active font"> استشارة مجانية</h4>
                     </div>
                  </div>
               </div>
@@ -83,8 +83,8 @@
                        <div class="right_arrow"><i class="fa fa-arrow-right"></i></div>
                     </div>
                     <div class="box_right" routerLink="/articles">
-                       <p class="book_text">اقرأ</p>
-                       <h4 class="appoinment_text">بعض مقالاتنا</h4>
+                       <p class="book_text font">اقرأ</p>
+                       <h4 class="appoinment_text font">بعض مقالاتنا</h4>
                     </div>
                  </div>
               </div>
@@ -98,7 +98,7 @@
        <div class="container">
           <div class="row">
              <div class="col-sm-12">
-                <h1 class="studies_taital">{{ 'services.service' | translate }}</h1>
+                <h1 class="studies_taital font">{{ 'services.service' | translate }}</h1>
              </div>
           </div>
        </div>
@@ -114,14 +114,14 @@
                                   <img src="assets/images/icon-1.png" class="image_1">
                                   <img src="assets/images/icon-4.png" class="image_2">
                                </div>
-                               <h3 class="corporate_text">{{ 'services.company' | translate }}</h3>
-                               <p class="chunks_text">
+                               <h3 class="corporate_text font">{{ 'services.company' | translate }}</h3>
+                               <p class="chunks_text font">
                                 * {{'companyField.p1' | translate}}<br>
                                 * {{'companyField.p2' | translate}}.
                                 <!-- * {{'companyField.p3' | translate}}. -->
                                
                                </p>
-                               <div class="readmore_button"><a routerLink="Companies">{{ 'cover.read' | translate }}</a></div>
+                               <div class="readmore_button"><a routerLink="/Companies" class="font">{{ 'cover.read' | translate }}</a></div>
                             </div>
                          </div>
                         
@@ -131,9 +131,9 @@
                                   <img src="assets/images/icon-3.png" class="image_1">
                                   <img src="assets/images/icon-6.png" class="image_2">
                                </div>
-                               <h3 class="corporate_text">{{ 'services.labor' | translate }}</h3>
-                               <p class="chunks_text">* {{'laborLaw.p2' | translate}}<br>
-                               <div class="readmore_button"><a routerLink="Working">{{ 'cover.read' | translate }}</a></div>
+                               <h3 class="corporate_text pb-1 pt-1 font">{{ 'services.labor' | translate }}</h3>
+                               <p class="chunks_text font">* {{'laborLaw.p2' | translate}}<br>
+                               <div class="readmore_button"><a routerLink="/Working" class="font">{{ 'cover.read' | translate }}</a></div>
                             </div>
                          </div>
 
@@ -143,9 +143,9 @@
                                  <img src="assets/images/icon-2.png" class="image_1">
                                  <img src="assets/images/icon-5.png" class="image_2">
                               </div>
-                              <h3 class="corporate_text">{{ 'services.legal' | translate }}</h3>
-                              <p class="chunks_text">* {{ 'legal.p1' | translate }} </p>
-                              <div class="readmore_button"><a routerLink="legal">{{ 'cover.read' | translate }}</a></div>
+                              <h3 class="corporate_text font">{{ 'services.legal' | translate }}</h3>
+                              <p class="chunks_text font">* {{ 'legal.p1' | translate }} </p>
+                              <div class="readmore_button"><a routerLink="/legal" class="font">{{ 'cover.read' | translate }}</a></div>
                            </div>
                         </div>
 
@@ -162,14 +162,14 @@
                                  <img src="assets/images/icon-1.png" class="image_1">
                                  <img src="assets/images/icon-4.png" class="image_2">
                               </div>
-                              <h3 class="corporate_text">{{ 'services.company' | translate }}</h3>
-                              <p class="chunks_text">
+                              <h3 class="corporate_text font">{{ 'services.company' | translate }}</h3>
+                              <p class="chunks_text font">
                                * {{'companyField.p1' | translate}}<br>
                                * {{'companyField.p2' | translate}}.
                                <!-- * {{'companyField.p3' | translate}}. -->
                               
                               </p>
-                              <div class="readmore_button"><a routerLink="Companies">{{ 'cover.read' | translate }}</a></div>
+                              <div class="readmore_button"><a routerLink="/Companies">{{ 'cover.read' | translate }}</a></div>
                            </div>
                         </div>
                        
@@ -179,9 +179,9 @@
                                  <img src="assets/images/icon-3.png" class="image_1">
                                  <img src="assets/images/icon-6.png" class="image_2">
                               </div>
-                              <h3 class="corporate_text">{{ 'services.labor' | translate }}</h3>
-                              <p class="chunks_text">* {{'laborLaw.p2' | translate}}<br>
-                              <div class="readmore_button"><a routerLink="Working">{{ 'cover.read' | translate }}</a></div>
+                              <h3 class="corporate_text font pt-1 pb-1">{{ 'services.labor' | translate }}</h3>
+                              <p class="chunks_text font">* {{'laborLaw.p2' | translate}}<br>
+                              <div class="readmore_button"><a routerLink="/Working" class="font">{{ 'cover.read' | translate }}</a></div>
                            </div>
                         </div>
 
@@ -191,9 +191,9 @@
                                 <img src="assets/images/icon-2.png" class="image_1">
                                 <img src="assets/images/icon-5.png" class="image_2">
                              </div>
-                             <h3 class="corporate_text">{{ 'services.legal' | translate }}</h3>
-                             <p class="chunks_text">* {{ 'legal.p1' | translate }} </p>
-                             <div class="readmore_button"><a routerLink="legal">{{ 'cover.read' | translate }}</a></div>
+                             <h3 class="corporate_text font">{{ 'services.legal' | translate }}</h3>
+                             <p class="chunks_text font">* {{ 'legal.p1' | translate }} </p>
+                             <div class="readmore_button"><a routerLink="/legal" class="font">{{ 'cover.read' | translate }}</a></div>
                           </div>
                        </div>
 
@@ -210,14 +210,14 @@
                                  <img src="assets/images/icon-1.png" class="image_1">
                                  <img src="assets/images/icon-4.png" class="image_2">
                               </div>
-                              <h3 class="corporate_text">{{ 'services.company' | translate }}</h3>
-                              <p class="chunks_text">
+                              <h3 class="corporate_text font">{{ 'services.company' | translate }}</h3>
+                              <p class="chunks_text font">
                                * {{'companyField.p1' | translate}}<br>
                                * {{'companyField.p2' | translate}}.
                                <!-- * {{'companyField.p3' | translate}}. -->
                               
                               </p>
-                              <div class="readmore_button"><a routerLink="Companies">{{ 'cover.read' | translate }}</a></div>
+                              <div class="readmore_button"><a routerLink="/Companies" class="font">{{ 'cover.read' | translate }}</a></div>
                            </div>
                         </div>
                        
@@ -227,9 +227,9 @@
                                  <img src="assets/images/icon-3.png" class="image_1">
                                  <img src="assets/images/icon-6.png" class="image_2">
                               </div>
-                              <h3 class="corporate_text">{{ 'services.labor' | translate }}</h3>
-                              <p class="chunks_text">* {{'laborLaw.p2' | translate}}<br>
-                              <div class="readmore_button"><a routerLink="Working">{{ 'cover.read' | translate }}</a></div>
+                              <h3 class="corporate_text font pt-1 pb-1">{{ 'services.labor' | translate }}</h3>
+                              <p class="chunks_text font">* {{'laborLaw.p2' | translate}}<br>
+                              <div class="readmore_button"><a routerLink="/Working" class="font">{{ 'cover.read' | translate }}</a></div>
                            </div>
                         </div>
 
@@ -239,9 +239,9 @@
                                 <img src="assets/images/icon-2.png" class="image_1">
                                 <img src="assets/images/icon-5.png" class="image_2">
                              </div>
-                             <h3 class="corporate_text">{{ 'services.legal' | translate }}</h3>
-                             <p class="chunks_text">* {{ 'legal.p1' | translate }} </p>
-                             <div class="readmore_button"><a routerLink="legal">{{ 'cover.read' | translate }}</a></div>
+                             <h3 class="corporate_text font">{{ 'services.legal' | translate }}</h3>
+                             <p class="chunks_text font">* {{ 'legal.p1' | translate }} </p>
+                             <div class="readmore_button"><a routerLink="/legal" class="font">{{ 'cover.read' | translate }}</a></div>
                           </div>
                        </div>
 
@@ -265,7 +265,7 @@
         <div class="container">
            <div class="row">
               <div class="col-sm-12">
-                 <h1 class="studies_taital">{{ 'persons.team' | translate }}</h1>
+                 <h1 class="studies_taital font">{{ 'persons.team' | translate }}</h1>
               </div>
            </div>
            <div class="studies_section_2">
@@ -275,7 +275,7 @@
                        <figure><img src="assets/images/ali.png"></figure>
                     </div>
                     <div class="studies_box">
-                       <h3 class="introduction_text">
+                       <h3 class="introduction_text font">
                         {{'persons.ali' | translate}}
 
                        </h3>
@@ -302,7 +302,7 @@
                      {{'persons.ahmed' | translate}}
                      </h3>
                     </div>
-                    <div class="read_bt"><a routerLink="ahmedAmiri">{{ 'cover.read' | translate }}</a></div>
+                    <div class="read_bt"><a routerLink="/ahmedAmiri">{{ 'cover.read' | translate }}</a></div>
                  </div>
               </div>
            </div>
@@ -329,131 +329,17 @@
 
                      {{'about.description' | translate}}
                     </p>
-                    <div class="readmore_bt" [ngClass]="directionService.getButtonAlignment()"><a routerLink="about">{{'cover.read' | translate}}</a></div>
+                    <div class="readmore_bt" [ngClass]="directionService.getButtonAlignment()"><a routerLink="/about">{{'cover.read' | translate}}</a></div>
                  </div>
               </div>
            </div>
         </div>
-     </div>
-     <!-- about section end -->
+     </div>  <!-- about section end -->
 
 
-      <!-- testimonial section start -->
-      <!-- <div class="customer_section layout_padding">
-        <div class="container">
-           <div class="row">
-              <div class="col-sm-12">
-                 <h1 class="customer_taital">SATISFIED CLIENT Says</h1>
-              </div>
-           </div>
-        </div>
-        <div id="my_slider" class="carousel slide" data-ride="carousel">
-           <div class="carousel-inner">
-              <div class="carousel-item active">
-                 <div class="customer_section_2">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-12">
-                             <div class="box_main">
-                                <div class="customer_main">
-                                   <div class="customer_left">
-                                      <div class="customer_img"><img src="assets/images/customer-img.png"></div>
-                                   </div>
-                                   <div class="customer_right">
-                                      <h3 class="customer_name">Giolio Mark <span class="quick_icon"><img src="assets/images/quick-icon.png"></span></h3>
-                                      <p class="enim_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internetanything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
-                                   </div>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <div class="carousel-item">
-                 <div class="customer_section_2">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-12">
-                             <div class="box_main">
-                                <div class="customer_main">
-                                   <div class="customer_left">
-                                      <div class="customer_img"><img src="assets/images/customer-img.png"></div>
-                                   </div>
-                                   <div class="customer_right">
-                                      <h3 class="customer_name">DenoMark <span class="quick_icon"><img src="assets/images/quick-icon.png"></span></h3>
-                                      <p class="enim_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internetanything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
-                                   </div>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <div class="carousel-item">
-                 <div class="customer_section_2">
-                    <div class="container">
-                       <div class="row">
-                          <div class="col-md-12">
-                             <div class="box_main">
-                                <div class="customer_main">
-                                   <div class="customer_left">
-                                      <div class="customer_img"><img src="assets/images/customer-img.png"></div>
-                                   </div>
-                                   <div class="customer_right">
-                                      <h3 class="customer_name">DenoMark <span class="quick_icon"><img src="assets/images/quick-icon.png"></span></h3>
-                                      <p class="enim_text">anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internetanything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet</p>
-                                   </div>
-                                </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-           <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
-           <i class="fa fa-arrow-left"></i>
-           </a>
-           <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
-           <i class="fa fa-arrow-right"></i>
-           </a>
-        </div>
-     </div> -->
-     <!-- testimonial section end -->
 
 
-     <!-- news section start -->
-     <!-- <div class="news_section layout_padding">
-        <div class="container">
-           <h1 class="news_taital">Recent News</h1>
-           <div class="news_section_2">
-              <div class="news_box">
-                 <div id="custom_slider" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                       <div class="carousel-item active">
-                          <div class="news_img"><img src="assets/images/news-img.png"></div>
-                       </div>
-                       <div class="carousel-item">
-                          <div class="news_img"><img src="assets/images/news-img.png"></div>
-                       </div>
-                       <div class="carousel-item">
-                          <div class="news_img"><img src="assets/images/news-img.png"></div>
-                       </div>
-                    </div>
-                    <a class="carousel-control-next" href="#custom_slider" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
-                    </a>
-                 </div>
-                 <h2 class="does_taital">What Does Marijuana Law Mean for You?</h2>
-                 <p class="dummy_text">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-              </div>
-           </div>
-        </div>
-     </div> -->
-     <!-- news section end -->
-
+   
 
       <!-- contact section start -->
       <div class="contact_section layout_padding">
