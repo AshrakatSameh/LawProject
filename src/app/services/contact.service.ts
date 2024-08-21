@@ -6,27 +6,25 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ArticlesService {
+export class ContactService {
 
   private apiUrl:string = environment.apiUrl
 
-  private baseURL =`${this.apiUrl}Article/CreateArticle`
+  private baseURL =`${this.apiUrl}Contact/SendContactUs`
 
   constructor(private http:HttpClient) { }
 
-  getAllArticles(){
-    return this.http.get(`${this.apiUrl}Article/Articles`)
+  getAllContacts(){
+    return this.http.get(`${this.apiUrl}Contact/GetContactUs`)
   }
 
-  postArticle(data: any): Observable<any> {
+  postContact(data: any): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     console.log('Data sent to API:', data); // Debug log
     return this.http.post(this.baseURL, data, { headers });
 }
 
-deleteArticleById(id: number): Observable<void> {
-  return this.http.delete<void>(`${this.apiUrl}Article/${id}`);
+deleteContactById(id: number): Observable<void> {
+  return this.http.delete<void>(`${this.apiUrl}Contact/${id}`);
 }
-
-
 }

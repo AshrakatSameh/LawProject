@@ -9,6 +9,15 @@
          <div class="row">
             <div class="col-md-12">
                <div class="mail_section map_form_container">
+                  <form action="" [formGroup]="myContactForm" (ngSubmit)="onSubmitContact()"
+                  >
+                     <input type="text" class="mail_text" placeholder="{{'contact.Name' |translate}}" name="Name" formControlName="name">
+                     <input type="text" class="mail_text" placeholder="{{'contact.phone' |translate}}" name="Phone Number" formControlName="phoneNumber"> 
+                     <input type="text" class="mail_text" placeholder="{{'contact.email' |translate}}" name="Your Email" formControlName="email">
+                     <textarea class="massage-bt" placeholder="{{'contact.message' |translate}}" rows="5" id="comment" name="Massage" formControlName="message"></textarea>
+                     <div class="send_bt active" (click)="submitForm($event)" >
+                        <a style="color: white;">{{ 'contact.send' | translate }}</a>
+                      </div>                  </form>
                   <form action="">
                      <input type="text" class="mail_text font" placeholder="{{'contact.Name' |translate}}" name="Name">
                      <input type="text" class="mail_text font" placeholder="{{'contact.phone' |translate}}" name="Phone Number"> 
