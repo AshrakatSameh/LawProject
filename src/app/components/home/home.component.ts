@@ -14,6 +14,8 @@ export class HomeComponent {
 
   lang: string;
   myContactForm: FormGroup;
+  isArabic: boolean;
+
 
 
   constructor(
@@ -22,6 +24,10 @@ export class HomeComponent {
     public directionService: DirectionService,
     private fb: FormBuilder, private contactService: ContactService
   ) {
+
+    this.isArabic = this.translate.currentLang === 'ar';
+
+
     this.lang =
       localStorage.getItem('language') || this.translate.getDefaultLang();
     this.languageService.switchLanguage(this.lang); // Update the language
