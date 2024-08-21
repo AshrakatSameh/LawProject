@@ -62,7 +62,7 @@
         </a>
       </li>
       <li class="sub-menu">
-        <a href="javascript:;">
+        <a (click)="toggleClientTable()">
           <i class="fa fa-book"></i>
           <span>{{ "dashboard.client" | translate }}</span>
         </a>
@@ -141,19 +141,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let item of contacts">
                 <td>
-                  <button class="btn btn-success btn-xs mr-1">
+                  <!-- <button class="btn btn-success btn-xs mr-1">
                     <i class="fa fa-plus"></i>
-                  </button>
-                  <button class="btn btn-danger btn-xs">
+                  </button> -->
+                  <button class="btn btn-danger btn-xs" (click)="deleteContactById(item.id)">
                     <i class="fa fa-trash-o"></i>
                   </button>
                 </td>
-                <td><a href="basic_table.html#">Total Ltd</a></td>
-                <td class="hidden-phone">Lorem Ipsum dolor</td>
-                <td>12120.00$</td>
-                <td><span class="label label-warning label-mini">Due</span></td>
+                <td><a href="basic_table.html#">{{item.message}}</a></td>
+                <td class="hidden-phone">{{item.email}}</td>
+                <td>{{item.phoneNumber}}</td>
+                <td><span class="label label-warning label-mini">{{item.name}}</span></td>
               </tr>
             </tbody>
           </table>
@@ -180,12 +180,12 @@
             <thead>
               <tr>
                 <th></th>
-                <th>
+                <!-- <th>
                   {{ "dashboard.BookPdf" | translate }}
                   <i class="fa fa-file"></i>
-                </th>
+                </th> -->
 
-                <!-- <th> {{'dashboard.ImageUrl' |translate}} <i class="fa fa-link"></i> </th> -->
+                <th> {{'dashboard.ImageUrl' |translate}} <i class="fa fa-link"></i> </th>
                 <th>
                   {{ "dashboard.author" | translate }}
                   <i class="fa fa-user"></i>
@@ -202,18 +202,18 @@
             <tbody>
               <tr *ngFor="let item of books">
                 <td>
-                  <button class="btn btn-success btn-xs mr-1">
+                  <button class="btn btn-success btn-xs mr-1" (click)="toggleBookAddingForm()">
                     <i class="fa fa-plus"></i>
                   </button>
 
-                  <button class="btn btn-danger btn-xs">
-                    <i class="fa fa-trash-o"></i>
+                  <button class="btn btn-danger btn-xs" >
+                    <i class="fa fa-trash-o" (click)="deleteBookById(item.id)"></i>
                   </button>
                 </td>
-                <td>
+                <!-- <td>
                   <a href="basic_table.html#">{{ item.bookPdf }}</a>
-                </td>
-                <!-- <td class="hidden-phone">{{item.imageUrl}}</td> -->
+                </td> -->
+                <td class="hidden-phone">{{item.imageUrl}}</td>
                 <td>{{ item.author }}</td>
                 <td>
                   <span class="label label-warning label-mini">{{
@@ -291,6 +291,62 @@
     </div>
     <!-- /row -->
 
+       <!-- // Clients Table -->
+
+       <div
+       class="row mt"
+       *ngIf="isClientTableShow"
+       [ngClass]="{
+         rtl: directionService.getDirection() === 'rtl',
+         ltr: directionService.getDirection() === 'ltr'
+       }"
+     >
+       <div class="col-md-12">
+         <div class="content-panel">
+           <table class="table table-striped table-advance table-hover">
+             <thead>
+               <tr>
+                 <th></th>
+                 <th>
+                   {{ "contact.description" | translate }}
+                   <i class="fa fa-comment"></i>
+                 </th>
+                 <th>
+                   {{ "contact.email" | translate }}
+                   <i class="fa fa-envelope"></i>
+                 </th>
+                 <th class="hidden-phone">
+                   {{ "contact.phone" | translate }} <i class="fa fa-phone"></i>
+                 </th>
+                 <th>
+                   {{ "contact.Name" | translate }} <i class="fa fa-user"></i>
+                 </th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr *ngFor="let item of clients">
+                 <td>
+                   <!-- <button class="btn btn-success btn-xs mr-1">
+                     <i class="fa fa-plus"></i>
+                   </button> -->
+                   <button class="btn btn-danger btn-xs" (click)="deleteClientById(item.id)">
+                     <i class="fa fa-trash-o"></i>
+                   </button>
+                 </td>
+                 <td><a href="basic_table.html#">{{item.description}}</a></td>
+                 <td class="hidden-phone">{{item.email}}</td>
+                 <td>{{item.phoneNumber}}</td>
+                 <td><span class="label label-warning label-mini">{{item.name}}</span></td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+         <!-- /content-panel -->
+       </div>
+       <!-- /col-md-12 -->
+     </div>
+
+
     <!-- // Adding Articles -->
 
     <div id="login-page" *ngIf="isArticleAddingFormShow">
@@ -310,9 +366,9 @@
               <input
                 type="text"
                 class="form-control"
-                name="title"
                 formControlName="title"
-                placeholder="title"
+                placeholder="Title of book"
+                name="title"
                 required
               />
             </div>
@@ -320,9 +376,9 @@
               <input
                 type="text"
                 class="form-control"
-                name="description"
                 formControlName="description"
-                placeholder="description"
+                placeholder="Message"
+                name="description"
                 required
               />
             </div>
@@ -333,6 +389,7 @@
                 class="form-control"
                 formControlName="postDate"
                 placeholder="Date of Birth"
+                name="postDate"
                 required
               />
             </div>
@@ -346,5 +403,74 @@
         </div>
       </div>
     </div>
+
+
+    <!-- // Adding Books -->
+
+    <div id="login-page" *ngIf="isBookAddingFormShow">
+      <div class="background-overlay"></div>
+      <div class="login-container">
+        <div class="login-box">
+          <div class="login-logo">
+            <h1>Add Book</h1>
+          </div>
+          <form
+            class="login-form"
+            action="#"
+            [formGroup]="myBookForm"
+            (ngSubmit)="postBook()"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="title"
+                formControlName="title"
+                placeholder="Title"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                name="description"
+                formControlName="description"
+                placeholder="Description"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                formControlName="author"
+                placeholder="author"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <input
+                type="file"
+                class="form-control"
+                formControlName="imageUrl"
+                placeholder="image"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
   </section>
 </section>
