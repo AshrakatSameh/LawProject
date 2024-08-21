@@ -23,8 +23,4 @@ export class BooksService {
     return this.http.post(this.baseURL, data, { headers });
 }
 
-deleteBookById(id: number): Observable<void> {
-  return this.http.delete<void>(`${this.apiUrl}Book/${id}`);
-}
-
 }

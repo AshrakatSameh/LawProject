@@ -32,8 +32,7 @@
     "phone": " رقم الهاتف",
     "email": "البريد الالكتروني  ",
     "message": "الموضوع",
-    "send": "ارسال",
-    "description":"الغرض"
+    "send": "ارسال"
     
   },
   "companyField": {
