@@ -55,4 +55,5 @@ div,p , a ,h1, h2, h3, h4 , input,textarea {
 /* Align button to the right */
 .rtl-align-button {
   float: right;
+  
 }

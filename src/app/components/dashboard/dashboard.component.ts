@@ -35,6 +35,14 @@ export class DashboardComponent implements OnInit {
 
   books:any[] = [];
   articles:any[] =[];
+
+  contacts:any[]=[];
+  // isArticleAddingFormShow=false;
+  // isClientTableShow= false;
+
+
+  // books:any[] = [];
+  // articles:any[] =[];
   clients:any[] =[];
 
   myArticleForm:FormGroup;
@@ -79,6 +87,7 @@ toggleAtricleAddingForm():void{
   this.isArticleTableShow = false;
   this.isArticleAddingFormShow=true;
 }
+
 
   constructor(
     private translate: TranslateService,
