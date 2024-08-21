@@ -39,9 +39,12 @@ export class DashboardComponent implements OnInit {
   books:any[] = [];
   articles:any[] =[];
   contacts:any[]=[];
- 
+  isArticleAddingFormShow=false;
+  isClientTableShow= false;
 
 
+  books:any[] = [];
+  articles:any[] =[];
   clients:any[] =[];
 
   myArticleForm:FormGroup;
@@ -63,44 +66,45 @@ export class DashboardComponent implements OnInit {
    
   }
 
-// toggleContactUsTable() :void{
-//   this.isContactTableShow = true;
-//   this.isBookTableShow = false;
-//   this.isArticleTableShow = false;
-//   this.isArticleAddingFormShow=false;
+toggleContactUsTable() :void{
+  this.isContactTableShow = true;
+  this.isBookTableShow = false;
+  this.isArticleTableShow = false;
+  this.isArticleAddingFormShow=false;
 
-// }
-// toggleClientTable() :void{
-//   this.isContactTableShow = false;
-//   this.isBookTableShow = false;
-//   this.isArticleTableShow = false;
-//   this.isArticleAddingFormShow=false;
-//   this.isClientTableShow= true;
+}
+toggleClientTable() :void{
+  this.isContactTableShow = false;
+  this.isBookTableShow = false;
+  this.isArticleTableShow = false;
+  this.isArticleAddingFormShow=false;
+  this.isClientTableShow= true;
 
-// }
+}
 
-// toggleBookTable():void {
-//   this.isContactTableShow = false;
-//   this.isBookTableShow = true;
-//   this.isArticleTableShow = false;
-//   this.isArticleAddingFormShow=false;
+toggleBookTable():void {
+  this.isContactTableShow = false;
+  this.isBookTableShow = true;
+  this.isArticleTableShow = false;
+  this.isArticleAddingFormShow=false;
 
-// }
+}
 
-// toggleArticleTable() :void{
-//   this.isContactTableShow = false;
-//   this.isBookTableShow = false;
-//   this.isArticleTableShow = true;
-//   this.isArticleAddingFormShow=false;
+toggleArticleTable() :void{
+  this.isContactTableShow = false;
+  this.isBookTableShow = false;
+  this.isArticleTableShow = true;
+  this.isArticleAddingFormShow=false;
 
-// }
+}
 
-// toggleAtricleAddingForm():void{
-//   this.isContactTableShow = false;
-//   this.isBookTableShow = false;
-//   this.isArticleTableShow = false;
-//   this.isArticleAddingFormShow=true;
-// }
+toggleAtricleAddingForm():void{
+  this.isContactTableShow = false;
+  this.isBookTableShow = false;
+  this.isArticleTableShow = false;
+  this.isArticleAddingFormShow=true;
+}
+>>>>>>> 981e8244973faef78a9a6836c1ba8ac0bd54621c
 
   constructor(
     private translate: TranslateService,
